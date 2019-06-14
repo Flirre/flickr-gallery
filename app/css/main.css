@@ -1,0 +1,11 @@
+.🐹 {
+  padding: 44px;
+  background: aliceblue;
+  color: #444;
+  text-align: center;
+  font-family: 'Parisienne', cursive;
+  font-size: 44px;
+}
+.🐹::after {
+  content: "Take care of the sense, and the sounds will take care of themselves."
+}

@@ -51,8 +51,8 @@ function setInitialClasses() {
 }
 
 function setEventListeners() {
-  var next = document.getElementsByClassName("carousel-button-next")[0],
-    prev = document.getElementsByClassName("carousel-button-prev")[0];
+  let next = document.getElementsByClassName("carousel-button-next")[0];
+  let prev = document.getElementsByClassName("carousel-button-prev")[0];
 
   next.addEventListener("click", moveNext);
   prev.addEventListener("click", movePrev);

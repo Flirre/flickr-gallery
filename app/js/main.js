@@ -26,6 +26,7 @@ document.addEventListener("DOMContentLoaded", function() {
     })
     .then(function() {
       initCarousel();
+      initTouch();
     });
 });
 
@@ -144,4 +145,41 @@ function initCarousel() {
   setInitialClasses();
   setEventListeners();
   moving = false;
+}
+
+/* Touch controls */
+
+let xDown = null;
+function getTouches(evt) {
+  return evt.touches || evt.originalEvent.touches;
+}
+
+function handleTouchStart(evt) {
+  const firstTouch = getTouches(evt)[0];
+  xDown = firstTouch.clientX;
+}
+
+function handleTouchMove(evt) {
+  if (!xDown) {
+    return;
+  }
+
+  let xUp = evt.touches[0].clientX;
+  let xDiff = xDown - xUp;
+
+  if (xDiff > 0) {
+    moveNext();
+  } else {
+    movePrev();
+  }
+  /* reset values */
+  xDown = null;
+}
+
+function initTouch() {
+  const carousel = document
+    .getElementsByClassName("carousel-container")
+    .item(0);
+  carousel.addEventListener("touchstart", handleTouchStart, false);
+  carousel.addEventListener("touchmove", handleTouchMove, false);
 }

@@ -33,9 +33,15 @@ function appendPhoto(url) {
   const gallery = document.getElementById("gallery");
   const imageElem = document.createElement("span");
   const imageSrc = document.createElement("img");
-
+  const downloadImage = new Image();
+  downloadImage.onload = function() {
+    imageSrc.setAttribute("src", url);
+  };
+  downloadImage.onerror = function() {
+    imageElem.style.background = "url(../assets/error.png) 50% no-repeat";
+  };
+  downloadImage.setAttribute("src", url);
   imageElem.classList.add("carousel-photo");
-  imageSrc.setAttribute("src", url);
   imageSrc.classList.add("carousel-src");
   if (photos === 0) {
     imageElem.classList.add("first");

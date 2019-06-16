@@ -8,7 +8,7 @@ let galleryPhotos;
 
 document.addEventListener("DOMContentLoaded", function() {
   fetch(
-    "https://www.flickr.com/services/rest/?method=flickr.photos.search&format=json&nojsoncallback=1&api_key=0d8c0f6a218bd0f4408bda4965712e2e&tags=car&safe_search=1&content_type=1&media=photos&extras=url_o&per_page=25;"
+    "https://www.flickr.com/services/rest/?method=flickr.photos.search&format=json&nojsoncallback=1&api_key=0d8c0f6a218bd0f4408bda4965712e2e&tags=sportscar&safe_search=1&content_type=1&media=photos&extras=url_o&per_page=25;"
   )
     .then(function(response) {
       return response.json();

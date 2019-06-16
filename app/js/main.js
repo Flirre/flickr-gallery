@@ -30,14 +30,17 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 function appendPhoto(url) {
-  const imageElem = document.createElement("img");
   const gallery = document.getElementById("gallery");
+  const imageElem = document.createElement("span");
+  const imageSrc = document.createElement("img");
 
-  imageElem.setAttribute("src", url);
   imageElem.classList.add("carousel-photo");
+  imageSrc.setAttribute("src", url);
+  imageSrc.classList.add("carousel-src");
   if (photos === 0) {
     imageElem.classList.add("first");
   }
+  imageElem.appendChild(imageSrc);
   gallery.appendChild(imageElem);
   photos++;
 }
@@ -49,10 +52,19 @@ function setInitialClasses() {
   galleryPhotos[0].classList.add("active");
   galleryPhotos[1].classList.add("next");
 }
+function handleKey(event) {
+  if (event.keyCode === 39) {
+    moveNext();
+  }
+  if (event.keyCode === 37) {
+    movePrev();
+  }
+}
 
 function setEventListeners() {
   let next = document.getElementsByClassName("carousel-button-next")[0];
   let prev = document.getElementsByClassName("carousel-button-prev")[0];
+  document.addEventListener("keydown", handleKey);
 
   next.addEventListener("click", moveNext);
   prev.addEventListener("click", movePrev);

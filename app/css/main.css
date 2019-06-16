@@ -7,10 +7,18 @@ body {
 }
 
 .carousel-container {
+  font-size: 22px;
+}
+.carousel-container.demo-half {
   width: 50%;
   height: 40vh;
-  font-size: 22px;
   float: left;
+}
+
+.carousel-container.demo-full {
+  width: 90%;
+  height: 70vh;
+  margin: auto;
 }
 
 .carousel {
@@ -105,9 +113,29 @@ body {
   right: 8px;
 }
 
-.demo-full {
+p.demo-full {
   text-align: center;
   width: 60%;
   margin: 0 auto;
   padding-bottom: 8px;
+}
+
+h1.demo-full {
+  padding-top: 16px;
+  margin-bottom: 8px;
+}
+
+p.demo-half {
+  float: right;
+  width: 46%;
+  padding-left: 2%;
+}
+
+h1.demo-half {
+  padding-top: 64px;
+  padding-bottom: 0px;
+}
+
+.hidden {
+  display: none;
 }

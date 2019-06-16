@@ -10,19 +10,22 @@
   </head>
   <body class="">
     <h1>Flickr Gallery</h1>
-    <!-- <h1 style="padding-top: 16px; margin-bottom: 8px">Cars</h1>
-	 <p class="demo-full">
-	 A car (or automobile) is a wheeled motor vehicle used for transportation.
-	 Most definitions of car say they run primarily on roads, seat one to eight
-	 people, have four tires, and mainly transport people rather than goods.
-	 </p> -->
-    <div class="carousel-container">
+    <div style="width: 100%; float:none">
+      <button onclick="switchDemo()">switch</button>
+    </div>
+    <h1 class="demo-full hidden">Cars</h1>
+    <p class="demo-full hidden">
+      A car (or automobile) is a wheeled motor vehicle used for transportation.
+      Most definitions of car say they run primarily on roads, seat one to eight
+      people, have four tires, and mainly transport people rather than goods.
+    </p>
+    <div class="carousel-container demo-half">
       <div class="carousel" id="gallery">
         <div class="carousel-button-next"><span>&#8594;</span></div>
         <div class="carousel-button-prev">&#8592;</div>
       </div>
     </div>
-    <h1 style="padding-top: 64px; padding-bottom: 0px;">Cars</h1>
+    <h1 class="demo-half">Cars</h1>
     <p class="demo-half">
       A car (or automobile) is a wheeled motor vehicle used for transportation.
       Most definitions of car say they run primarily on roads, seat one to eight

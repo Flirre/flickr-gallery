@@ -1,6 +1,7 @@
 let photos = 0;
 let slide = 0;
 let moving = true;
+let half = true;
 let galleryPhotos;
 // !(function(doc) {
 
@@ -182,4 +183,37 @@ function initTouch() {
     .item(0);
   carousel.addEventListener("touchstart", handleTouchStart, false);
   carousel.addEventListener("touchmove", handleTouchMove, false);
+}
+
+/* switch demos */
+
+function switchDemo() {
+  const halfs = document.getElementsByClassName("demo-half");
+  const fulls = document.getElementsByClassName("demo-full");
+  if (half === true) {
+    for (let i = 0; i < halfs.length; i++) {
+      if (halfs.item(i).classList.contains("carousel-container")) {
+        halfs.item(i).className = "carousel-container demo-full";
+        i--;
+      } else {
+        halfs.item(i).classList.add("hidden");
+      }
+    }
+    for (let i = 0; i < fulls.length; i++) {
+      fulls.item(i).classList.remove("hidden");
+    }
+  } else {
+    for (let i = 0; i < fulls.length; i++) {
+      if (fulls.item(i).classList.contains("carousel-container")) {
+        fulls.item(i).className = "carousel-container demo-half";
+        i--;
+      } else {
+        fulls.item(i).classList.add("hidden");
+      }
+    }
+    for (let i = 0; i < halfs.length; i++) {
+      halfs.item(i).classList.remove("hidden");
+    }
+  }
+  half = !half;
 }

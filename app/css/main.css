@@ -8,7 +8,7 @@ body {
 
 .carousel-container {
   width: 50%;
-  height: 30vh;
+  height: 40vh;
   font-size: 22px;
   float: left;
 }
@@ -78,8 +78,8 @@ body {
 .carousel-button-next {
   position: absolute;
   bottom: 50%;
-  width: 2rem;
-  height: 2rem;
+  width: 1.5rem;
+  height: 1.5rem;
   background-color: rgba(0, 0, 0, 0.67);
   color: #fff;
   transform: translateY(50%);
@@ -87,13 +87,27 @@ body {
   border-radius: 50%;
   cursor: pointer;
   z-index: 1001;
-  line-height: 2rem;
+  line-height: 1.5rem;
+}
+
+@media only screen and (max-device-width: 768px) {
+  .carousel-button-prev,
+  .carousel-button-next {
+    line-height: 1rem;
+  }
 }
 
 .carousel-button-prev {
-  left: 0;
+  left: 8px;
 }
 
 .carousel-button-next {
-  right: 0;
+  right: 8px;
+}
+
+.demo-full {
+  text-align: center;
+  width: 60%;
+  margin: 0 auto;
+  padding-bottom: 8px;
 }

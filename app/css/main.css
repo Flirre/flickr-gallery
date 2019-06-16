@@ -94,13 +94,3 @@ body {
 .carousel-button-next {
   right: 0;
 }
-
-.carousel-button-prev::after,
-.carousel-button-next::after {
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  top: 50%;
-  left: 54%;
-  transform: translate(-50%, -50%) rotate(135deg);
-}

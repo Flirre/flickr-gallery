@@ -1,10 +1,9 @@
 body {
-  padding: 0px;
-  margin: 0px;
+  padding: 0;
+  margin: 0;
   background: aliceblue;
   color: #444;
   text-align: center;
-  font-size: 22px;
 }
 
 .carousel-wrapper {
@@ -12,6 +11,7 @@ body {
   width: 50%;
   height: 30vh;
   margin: 0 auto;
+  font-size: 22px;
 }
 
 .carousel-wrapper * {
@@ -19,24 +19,14 @@ body {
 }
 
 .carousel {
+  transform-style: preserve-3d;
   -webkit-transform-style: preserve-3d;
   -moz-transform-style: preserve-3d;
-  transform-style: preserve-3d; /* This needs comp-fix for IE11 https://stackoverflow.com/questions/22848328/css3-3d-transform-doesnt-work-on-ie11 */
+  -ms-transform-style: none;
   width: 100%;
   height: 100%;
   margin: auto;
-}
-
-.carousel-src {
-  max-height: 100%;
-  max-width: 100%;
-  width: auto;
-  height: auto;
-  margin: auto;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  position: relative;
 }
 
 .carousel-photo {
@@ -47,9 +37,9 @@ body {
   height: 100%;
   width: calc(100% - 72px);
   margin: auto;
-  padding: 1rem 4rem;
   z-index: 100;
   transition: transform 0.5s, opacity 0.5s, z-index 0.5s;
+  -ms-transition: transform 0.5s opacity 0.5s, z-index 0.5s;
 }
 
 .carousel-photo.first,
@@ -66,21 +56,37 @@ body {
 
 .carousel-photo.prev {
   transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
 }
 
 .carousel-photo.next {
   transform: translateX(100%);
+  -ms-transform: translateX(100%);
+}
+
+.carousel-src {
+  max-height: 100%;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  margin: auto;
+  position: absolute;
+  bottom: 50%;
+  right: 50%;
+  transform: translate(50%, 50%);
+  -ms-transform: translate(50%, 25%);
 }
 
 .carousel-button-prev,
 .carousel-button-next {
   position: absolute;
-  top: 50%;
+  bottom: 50%;
   width: 2rem;
   height: 2rem;
   background-color: rgba(0, 0, 0, 0.67);
   color: #fff;
-  transform: translateY(-50%);
+  transform: translateY(50%);
+  -ms-transform: translateY(50%);
   border-radius: 50%;
   cursor: pointer;
   z-index: 1001;

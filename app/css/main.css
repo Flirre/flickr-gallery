@@ -1,11 +1,89 @@
-.🐹 {
-  padding: 44px;
+body {
+  padding: 0px;
+  margin: 0px;
   background: aliceblue;
   color: #444;
   text-align: center;
-  font-family: 'Parisienne', cursive;
-  font-size: 44px;
+  font-size: 22px;
 }
-.🐹::after {
-  content: "Take care of the sense, and the sounds will take care of themselves."
+
+.carousel-wrapper {
+  overflow: hidden;
+  width: 75%;
+  margin: 0 auto;
+}
+
+.carousel-wrapper * {
+  box-sizing: border-box;
+}
+
+.carousel {
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d; /* This needs comp-fix for IE11 https://stackoverflow.com/questions/22848328/css3-3d-transform-doesnt-work-on-ie11 */
+}
+
+.carousel-photo {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  margin: auto;
+  padding: 1rem 4rem;
+  z-index: 100;
+  transition: transform 0.5s, opacity 0.5s z-index 0.5s;
+}
+
+.carousel-photo.first,
+.carousel-photo.active {
+  opacity: 1;
+  position: relative;
+  z-index: 900;
+}
+
+.carousel-photo.prev,
+.carousel-photo.next {
+  z-index: 800;
+}
+
+.carousel-photo.prev {
+  transform: translateX(-100%);
+}
+
+.carousel-photo.next {
+  transform: translateX(100%);
+}
+
+.carousel-button-prev,
+.carousel-button-next {
+  position: absolute;
+  top: 50%;
+  width: 3rem;
+  height: 3rem;
+  background-color: #fff;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1001;
+  border: 1px solid black;
+}
+
+.carousel-button-prev {
+  left: 0;
+}
+
+.carousel-button-next {
+  right: 0;
+}
+
+.carousel-button-prev::after,
+.carousel-button-next::after {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: 50%;
+  left: 54%;
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+  transform: translate(-50%, -50%) rotate(135deg);
 }

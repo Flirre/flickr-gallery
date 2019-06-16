@@ -17,8 +17,9 @@ body {
 
 .carousel-container.demo-full {
   width: 90%;
-  height: 70vh;
+  height: 60vh;
   margin: auto;
+  padding-top: 16px;
 }
 
 .carousel {
@@ -117,7 +118,7 @@ p.demo-full {
   text-align: center;
   width: 60%;
   margin: 0 auto;
-  padding-bottom: 8px;
+  padding: 0 8px 8px;
 }
 
 h1.demo-full {
@@ -129,6 +130,7 @@ p.demo-half {
   float: right;
   width: 46%;
   padding-left: 2%;
+  padding-right: 2%;
 }
 
 h1.demo-half {

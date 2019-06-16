@@ -60,7 +60,6 @@ function setEventListeners() {
 
 function moveNext() {
   if (!moving) {
-    console.log("next");
     slide++;
     slide = slide % photos;
     moveCarouselTo(slide);
@@ -83,7 +82,7 @@ function disableInteraction() {
   // set moving to false after waiting 500ms(the time for the animation to finish)
   setTimeout(function() {
     moving = false;
-  }, 1000);
+  }, 500);
 }
 
 function moveCarouselTo(slide) {

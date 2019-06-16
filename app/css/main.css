@@ -144,5 +144,6 @@ h1.demo-half {
 
 button {
   border: 1px solid rgba(0, 0, 0, 0.36);
-  padding: 8px;
+  padding: 8px 8px 8px 8px;
+  margin-bottom: 8px;
 }

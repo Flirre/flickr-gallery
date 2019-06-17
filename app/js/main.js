@@ -3,9 +3,6 @@ let slide = 0;
 let moving = true;
 let half = true;
 let galleryPhotos;
-// !(function(doc) {
-
-// })(document);
 
 document.addEventListener("DOMContentLoaded", function() {
   fetch(
@@ -37,12 +34,15 @@ function appendPhoto(url) {
   const imageSrc = document.createElement("img");
   const downloadImage = new Image();
   downloadImage.onload = function() {
+    // set visible image to be downloaded image.
     imageSrc.setAttribute("src", url);
   };
   downloadImage.onerror = function() {
+    // if image download fails, set error.png to be visible.
     imageElem.style.background = "url(../assets/error.png) 50% no-repeat";
   };
-  downloadImage.setAttribute("src", url);
+
+  downloadImage.setAttribute("src", url); // start download of image.
   imageElem.classList.add("carousel-photo");
   imageSrc.classList.add("carousel-src");
   if (photos === 0) {
@@ -60,6 +60,8 @@ function setInitialClasses() {
   galleryPhotos[0].classList.add("active");
   galleryPhotos[1].classList.add("next");
 }
+
+// handle gallery movement with arrow keys
 function handleKey(event) {
   if (event.keyCode === 39) {
     moveNext();
@@ -73,7 +75,6 @@ function setEventListeners() {
   let next = document.getElementsByClassName("carousel-button-next")[0];
   let prev = document.getElementsByClassName("carousel-button-prev")[0];
   document.addEventListener("keydown", handleKey);
-
   next.addEventListener("click", moveNext);
   prev.addEventListener("click", movePrev);
 }
@@ -130,7 +131,8 @@ function moveCarouselTo(slide) {
         newNextSlide = 0;
         oldNextSlide = 1;
       }
-      // set the old prev/next to ordinary photos.
+
+      // set the old prev/next to ordinary/hidden photos.
       galleryPhotos[oldPrevSlide].className = "carousel-photo";
       galleryPhotos[oldNextSlide].className = "carousel-photo";
 
@@ -149,7 +151,6 @@ function initCarousel() {
 }
 
 /* Touch controls */
-
 let xDown = null;
 function getTouches(evt) {
   return evt.touches || evt.originalEvent.touches;
@@ -185,8 +186,7 @@ function initTouch() {
   carousel.addEventListener("touchmove", handleTouchMove, false);
 }
 
-/* switch demos */
-
+/* function to switch between full-width and half-width demo page */
 function switchDemo() {
   const halfs = document.getElementsByClassName("demo-half");
   const fulls = document.getElementsByClassName("demo-full");

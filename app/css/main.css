@@ -6,21 +6,6 @@ body {
   text-align: center;
 }
 
-.carousel-container {
-  font-size: 22px;
-}
-.carousel-container.demo-half {
-  width: 50%;
-  height: 40vh;
-  float: left;
-}
-
-.carousel-container.demo-full {
-  width: 90%;
-  height: 60vh;
-  margin: auto;
-  padding-top: 16px;
-}
 
 .carousel {
   transform-style: preserve-3d;
@@ -99,6 +84,7 @@ body {
   line-height: 1.5rem;
 }
 
+/* needed to center the icons on the buttons for next/prev picture */
 @media only screen and (max-device-width: 768px) {
   .carousel-button-prev,
   .carousel-button-next {
@@ -112,6 +98,22 @@ body {
 
 .carousel-button-next {
   right: 8px;
+}
+
+
+/* Demo CSS */
+
+.carousel-container.demo-half {
+  width: 50%;
+  height: 40vh;
+  float: left;
+}
+
+.carousel-container.demo-full {
+  width: 90%;
+  height: 60vh;
+  margin: auto;
+  padding-top: 16px;
 }
 
 p.demo-full {

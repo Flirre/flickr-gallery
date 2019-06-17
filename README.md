@@ -33,5 +33,5 @@ To see how the webpage looks using your setup click [here](http://flickr-gallery
 <img src="./images/Chrome-half.png" width="45%" align="right">
 
 ## Firefox Android app
-<img src="./images/Firefox-mobile-full.jpg" width="25%" align="left">
-<img src="./images/Firefox-mobile-half.jpg" width="25%" align="left">
+<img src="./images/Firefox-mobile-full.jpg" width="33%" align="left">
+<img src="./images/Firefox-mobile-half.jpg" width="33%" align="right">

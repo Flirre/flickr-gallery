@@ -19,17 +19,17 @@ Following this is how the webpage looks in different browsers on a monitor in po
 To see how the webpage looks using your setup click [here](http://flickr-gallery.netlify.com).
 
 ### IE11
-![image of website open in IE11](images/IE11-full.png)
-![image of website open in IE11](images/IE11-half.png)
+<img src="./images/IE11-full.png" width="256">
+<img src="./images/IE11-half.png" width="256">
 
 ### Firefox
-![image of website open in Firefox](images/Firefox-full.png)
-![image of website open in Firefox](images/Firefox-half.png)
+<img src="./images/Firefox-full.png" width="256">
+<img src="./images/Firefox-half.png" width="256">
 
 ### Chrome
-![image of website open in Chrome](images/Chrome-full.png)
-![image of website open in Chrome](images/Chrome-half.png)
+<img src="./images/Chrome-full.png" width="256">
+<img src="./images/Chrome-half.png" width="256">
 
 ### Firefox Android app
-![image of website open in Firefox Android Browser](images/Firefox-mobile-full.png)
-![image of website open in Firefox Android Browser](images/Firefox-mobile-half.png)
+<img src="./images/Firefox-mobile-full.jpg.png" width="192">
+<img src="./images/Firefox-half.png" width="192">

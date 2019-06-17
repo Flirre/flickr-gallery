@@ -14,22 +14,24 @@ To get it up and running open a terminal in the root folder and run:
 npm start
 ```
 
-## Images
+# Images
 Following this is how the webpage looks in different browsers on a monitor in portrait mode.
 To see how the webpage looks using your setup click [here](http://flickr-gallery.netlify.com).
 
-### IE11
+## IE11
 <img src="./images/IE11-full.png" width="45%" align="left">
 <img src="./images/IE11-half.png" width="45%" align="right">
 
-### Firefox
+
+## Firefox
 <img src="./images/Firefox-full.png" width="45%" align="left">
 <img src="./images/Firefox-half.png" width="45%" align="right">
 
-### Chrome
+
+## Chrome
 <img src="./images/Chrome-full.png" width="45%" align="left">
 <img src="./images/Chrome-half.png" width="45%" align="right">
 
-### Firefox Android app
+## Firefox Android app
 <img src="./images/Firefox-mobile-full.jpg" width="25%" align="left">
-<img src="./images/Firefox-mobile-half.jpg" width="25%" align="right">
+<img src="./images/Firefox-mobile-half.jpg" width="25%" align="left">
